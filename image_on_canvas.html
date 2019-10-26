@@ -1,17 +1,18 @@
-<!doctype html> 
+<!Doctype html> 
 <html>
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
   <head>
-    <title>Codejam Canvas</title>
+    <title>codejam-canvas</title>
   </head>
   <body>
-    <canvas id="canvas" width="500" height="500"></canvas>
+    <canvas id="canvas" width="512" height="512"></canvas>
     <script>
-     const example = document.getElementById("canvas"),
-        ctx = example.getContext("2d"), 
-        image = new Image();              
-        image.src = "image.png";  
-      ctx.drawImage(image, 0, 0); 
+      const canvas = document.getElementById("canvas"),
+            ctx = canvas.getContext("2d"),
+            image = new Image();        
+            image.src = "\image.png"; 
+      image.onload = function() {    
+        ctx.drawImage(image, 0, 0);  
       }
     </script>
   </body>
